@@ -59,9 +59,9 @@ The 's' character was found 20875 times
 --- End report ---
 
 
-O projeto está dividido em dois ficheiros principais para uma melhor organização:
+### O projeto está dividido em dois ficheiros principais para uma melhor organização:
 
-main.py: Este é o ponto de entrada do programa. 
+## main.py: Este é o ponto de entrada do programa. 
 
 É responsável por:
 
@@ -70,7 +70,7 @@ Ler o caminho do livro fornecido pelo utilizador.
 Chamar as funções de análise do módulo stats.
 Formatar e imprimir o relatório final no terminal.
 
-stats.py: Este ficheiro atua como uma "biblioteca" para o projeto, contendo a lógica principal da análise de texto:
+## stats.py: Este ficheiro atua como uma "biblioteca" para o projeto, contendo a lógica principal da análise de texto:
 
 words_counter(text): Conta as palavras.
 count_characters(text): Cria um dicionário com a contagem de cada caractere.
