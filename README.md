@@ -1,51 +1,115 @@
-# Projeto 1 - Bookbot
+# 📚 BookBot — Analisador de Livros em Python
 
-# BookBot: Analisador de Livros
+BookBot é uma aplicação de linha de comando desenvolvida em **Python** que analisa livros e arquivos `.txt`, gerando relatórios detalhados sobre o conteúdo do texto.
 
-BookBot é um programa de linha de comando, desenvolvido em Python, que analisa o texto de um livro (ou qualquer ficheiro `.txt`) e gera um relatório detalhado sobre o seu conteúdo.
+O projeto foi criado com foco em aprendizado de:
 
-Este projeto foi criado com o objetivo de praticar a manipulação de ficheiros, o processamento de texto e a interação com o utilizador através da linha de comando.
+- Manipulação de arquivos
+- Processamento de texto
+- Estruturas de dados
+- Organização modular de código
+- Uso de argumentos via terminal
 
-## Funcionalidades
+> 🚀 BookBot é meu primeiro projeto desenvolvido durante os estudos na plataforma Boot.dev.
 
-* **Contagem Total de Palavras**: Calcula o número total de palavras no texto fornecido.
-* **Frequência de Caracteres**: Conta a ocorrência de cada caractere alfabético no livro.
-* **Relatório Ordenado**: Apresenta um relatório limpo e ordenado da frequência dos caracteres, do mais comum ao menos comum.
-* **Uso via Linha de Comando**: Permite analisar qualquer livro sem precisar alterar o código-fonte, bastando passar o caminho do ficheiro como argumento.
+---
 
-## Requisitos
+# ✨ Funcionalidades
 
-* Python 3.6 ou superior.
-* Não são necessárias bibliotecas externas. O projeto utiliza apenas módulos nativos do Python.
+- 📖 Contagem total de palavras
+- 🔠 Frequência de caracteres alfabéticos
+- 📊 Relatório ordenado por frequência
+- 🧩 Código modular e organizado
+- 💻 Execução via linha de comando
+- ⚡ Utilização apenas de bibliotecas nativas do Python
 
-## Como Usar
+---
 
-Para executar o BookBot, siga os passos abaixo.
+# 🛠️ Tecnologias Utilizadas
 
-### 2. Execução do Programa
+| Tecnologia | Descrição |
+|---|---|
+| Python 3 | Linguagem principal |
+| sys | Manipulação de argumentos CLI |
+| Arquivos `.txt` | Fonte de dados para análise |
 
-Abra o seu terminal, navegue até à pasta raiz do projeto (`bookbot/`) e execute o comando abaixo, substituindo `<caminho_para_o_livro>` pelo ficheiro que deseja analisar. A pasta books, contém alguns livros de exemplos para testes.
+---
 
-**Formato do Comando:**
+# 📦 Requisitos
+
+- Python **3.6+**
+- Nenhuma biblioteca externa necessária
+
+---
+
+# 📁 Estrutura do Projeto
+
+```bash
+bookbot/
+│
+├── books/
+│   └── frankenstein.txt
+│
+├── main.py
+├── stats.py
+└── README.md
+```
+
+---
+
+# ▶️ Como Executar
+
+## 1️⃣ Clone o repositório
+
+```bash
+git clone https://github.com/thiagodraken/bookbot.git
+```
+
+## 2️⃣ Acesse a pasta do projeto
+
+```bash
+cd bookbot
+```
+
+## 3️⃣ Execute o programa
+
+```bash
 python3 main.py <caminho_para_o_livro>
+```
 
-Exemplos Práticos:
+---
 
-Para analisar o livro "Frankenstein":
+# 📚 Exemplos de Uso
+
+## Analisar o livro Frankenstein
+
+```bash
 python3 main.py books/frankenstein.txt
+```
 
-### 3. Em Caso de Erro
+---
 
-Se executar o programa sem especificar o caminho do livro, ele exibirá uma mensagem de ajuda:
+# ⚠️ Tratamento de Erros
+
+Caso o programa seja executado sem informar o caminho do arquivo:
+
+```bash
 python3 main.py
+```
 
-Saída:
+O retorno será:
+
+```bash
 Usage: python3 main.py <path_to_book>
+```
 
-Exemplo de Saída
-Ao executar a análise do livro "Frankenstein", a saída será semelhante a esta:
+---
 
+# 📄 Exemplo de Saída
+
+```bash
 --- Begin report of books/frankenstein.txt ---
+
 77986 words found in the document
 
 The 'e' character was found 46003 times
@@ -53,27 +117,82 @@ The 't' character was found 30234 times
 The 'a' character was found 26516 times
 The 'o' character was found 25118 times
 The 'n' character was found 24395 times
-The 'i' character was found 24161 times
-The 's' character was found 20875 times
+
 ...
+
 --- End report ---
+```
 
+---
 
-### O projeto está dividido em dois ficheiros principais para uma melhor organização:
+# 🧠 Arquitetura do Projeto
 
-## main.py: Este é o ponto de entrada do programa. 
+## `main.py`
 
-É responsável por:
+Responsável por:
 
-Verificar os argumentos da linha de comando com o módulo sys.
-Ler o caminho do livro fornecido pelo utilizador.
-Chamar as funções de análise do módulo stats.
-Formatar e imprimir o relatório final no terminal.
+- Ler argumentos da linha de comando
+- Validar entradas do usuário
+- Carregar o conteúdo do livro
+- Executar a análise
+- Exibir o relatório final
 
-## stats.py: Este ficheiro atua como uma "biblioteca" para o projeto, contendo a lógica principal da análise de texto:
+---
 
-words_counter(text): Conta as palavras.
-count_characters(text): Cria um dicionário com a contagem de cada caractere.
-sort_characters(dict): Ordena os caracteres pela sua frequência.
+## `stats.py`
 
-BookBot is my first [Boot.dev](https://www.boot.dev) project!
+Contém toda a lógica de processamento:
+
+| Função | Descrição |
+|---|---|
+| `words_counter(text)` | Conta o número total de palavras |
+| `count_characters(text)` | Conta a frequência dos caracteres |
+| `sort_characters(dict)` | Ordena os caracteres por frequência |
+
+---
+
+# 📚 Conceitos Praticados
+
+Durante o desenvolvimento deste projeto foram praticados conceitos como:
+
+- Manipulação de arquivos
+- Funções em Python
+- Dicionários e listas
+- Ordenação de dados
+- Processamento de strings
+- Estruturação de projetos
+- Programação modular
+- CLI (Command Line Interface)
+
+---
+
+# 🚧 Melhorias Futuras
+
+- 📊 Exportação de relatórios em JSON/CSV
+- 🌎 Suporte a múltiplos idiomas
+- 📈 Estatísticas avançadas
+- 🔍 Contagem de palavras mais frequentes
+- 🖥️ Interface gráfica
+- ⚡ Melhorias de performance para arquivos grandes
+
+---
+
+# 🤝 Contribuição
+
+Contribuições são bem-vindas!
+
+Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+---
+
+# 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+---
+
+# 👨‍💻 Autor
+
+Desenvolvido por **Thiago Henrique Vital de Oliveira**
+
+🔗 GitHub: https://github.com/thiagodraken
